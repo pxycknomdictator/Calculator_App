@@ -1,0 +1,118 @@
+/* TODO: CSS reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TODO: Defign some colors */
+
+:root{
+    --primary-color : hsl(36, 100%, 52%); 
+    --dark-gray : hsl(0, 0%, 20%);
+    --light-gray : hsl(0, 0%, 65%);
+}
+
+/* TODO: utility classes */
+
+.container{
+    width: 85%;
+    height: 100vh;
+    margin-inline: auto;
+}
+
+.grid{
+    display: grid;
+}
+
+/* TODO: main template css  */
+
+body{
+    background: #000;
+}
+
+.wrapper{
+    place-items: center;
+}
+
+
+form{
+    border: .1px solid rgb(184, 184, 184);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+#display{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: right;
+    padding-block: 1rem;
+    padding-right: 1.6rem;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid white;
+
+    color: white;
+    background: #000;
+}
+
+#display::placeholder{
+    color: white;
+}
+
+.buttons-wrapper{
+    grid-template-columns: repeat(4, 1fr);
+    gap: .8rem;
+    place-items: center;
+}
+
+.btn{
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 9999px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.bg-dark-gray{
+    background: var(--dark-gray);
+}
+
+.bg-dark-gray:hover{
+    background:  hsl(0, 0%, 30%);
+}
+
+.bg-gray{
+    background: var(--light-gray);
+    color: black;
+}
+
+.bg-gray:hover{
+    background:  hsl(0, 0%, 75%);
+}
+
+.bg-color{
+    background: var(--primary-color);
+}
+
+.bg-color:hover{
+    background:  hsl(36, 100%, 62%);
+}
+
+.separate{
+    grid-area: 5 / 1 / 6 / 3;
+    padding-right: 8.3rem;
+    padding-left: 2rem;
+}
